@@ -1,4 +1,4 @@
-package br.com.danielsouza.eletriccarapp.presentation;
+package br.com.danielsouza.eletriccarapp.ui;
 
 import android.os.Bundle
 import android.widget.Button
