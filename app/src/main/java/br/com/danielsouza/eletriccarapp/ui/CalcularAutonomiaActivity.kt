@@ -1,12 +1,17 @@
 package br.com.danielsouza.eletriccarapp.ui;
 
+import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import br.com.danielsouza.eletriccarapp.R
+import java.lang.Exception
+import java.net.HttpURLConnection
+import java.net.URL
 
 class CalcularAutonomiaActivity : AppCompatActivity() {
     lateinit var preco: EditText
@@ -31,11 +36,11 @@ class CalcularAutonomiaActivity : AppCompatActivity() {
     }
 
     fun setupListeners() {
-        btnCalcular.setOnClickListener{
+        btnCalcular.setOnClickListener {
             calcular()
         }
 
-        btnClose.setOnClickListener{
+        btnClose.setOnClickListener {
             finish()
         }
     }
@@ -48,5 +53,4 @@ class CalcularAutonomiaActivity : AppCompatActivity() {
 
         resultado.text = result.toString()
     }
-
 }
